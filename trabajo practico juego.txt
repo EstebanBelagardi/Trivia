@@ -1,0 +1,66 @@
+Trabajo Práctico Integrador IEFI – Programación II
+
+ Crear un juego con 15 preguntas, el usuario puede encontrar 3 posibles respuestas para elegir,
+puede encontrar opciones numéricas que seleccionar (spinbox), etc. En esta consigna se aplicará
+todos los widgets aprendidos hasta el momento en la materia o utilizar 4 botones para aquellas
+preguntas que tengan múltiple opción.
+ Se deberá crear en Python para el backend, utilizando Tkinter para el frontend.
+ Deberá contar con una base de datos para almacenar en tablas nombre del usuario, Instagram,
+puntaje obtenido (por cada respuesta correcta el usuario acumulará 100 puntos) y tiempo en
+que respondió las 15 preguntas. En otra tabla se almacenará, la tabla con preguntas y su
+respuesta.
+ Las funciones van a estar en un archivo aparte que sea importado al archivo ejecutable.
+ Pueden añadir iconos especiales.
+ Deberá contar con manejo de color en concordancia entre sí, para que el usuario se sienta a
+gusto con la colorimetría aplicada.
+ El diseño geométrico de la interfaz deberá ser fijo para que todas las ventanas tengan el mismo
+tamaño, el contenido de la ventana debe estar centrado y la posición de la ventana respecto a la
+pantalla del dispositivo deberá estar centrada.
+ El inicio del juego se basa en el ingreso de los datos del usuario, nombre, Instagram y un botó de
+“jugar”.
+ El transcurrir del juego será a medida que el usuario elija la opción que se ajuste a la pregunta,
+es decir si no ha respondido nada, no puede pasar a la siguiente pregunta (botón siguiente,
+disabled hasta que responda al menos 1 opción).
+ Al finalizar la secuencia de preguntas, el usuario podrá visualizar una grilla donde se mostrará un
+listado de participantes, el puntaje obtenido por cada uno de ellos y el tiempo en que resolvió el
+juego, ordenada desde el menor tiempo al mayor. Para esto, añadirán un scrollbar vertical.
+
+Información para las preguntas de la trivia: 
+
+
+Documento de relevamiento de información sobre el camino de los 40 años del ISAUI.
+1 ¿En qué año se fundó?
+ 1983
+2 ¿Cuál fue el nombre del establecimiento educativo cuando se fundó?
+ COMPLEJO FACULTATIVO DE ENSEÑANZA SUPERIOR San Francisco de Asís (COFES Sn.FCO.DE ASIS)
+Apellido y Nombre de los fundadores: LISTA DEL LIBRO DE ACTAS SON 16 CREO (COLOCAR CUALQUIER DATO, LUEGO UPDATEAMOS LA BDD)
+3 ¿En qué año se convierte a colegio Nacional? 
+ 22/07/85 
+4 ¿Cuántos directores tuvo el Instituto hasta la fecha? 
+ Adolfo Bur, Mario Carletti, Gisela Flores , Maximiliano Ibañez
+5 ¿Cuántas carreras se dictan actualmente en el ISAUI ?
+ 6
+6 ¿ Cuál fue el primer número de teléfono del Instituto? 
+ 41164
+7 ¿Qué es el workshop?
+ Es una técnica de venta, en el ISAUI los alumnos venden los proyectos trabajados durante el ciclo lectivo 
+ en una muestra a fin de año. 
+8 ¿Qué carrera fue la pionera con los viajes en las materias de prácticas? 
+ TÉCNICO Y GUIA SUPERIOR EN TURISMO
+9 ¿Cómo era el edificio  educativo en sus comienzos? 
+ ERA UNA CASA CON 3 AMBIENTES QUE SE CONVIRTIERON EN AULAS
+10 ¿ISAUI es un Instituto público? 
+ Sí
+11 ¿A PARTIR DE QUÉ AÑO LA COOPERADORA EMPEZÓ A CONSTRUIR LAS AULAS? 
+ A PARTIR DE 1986, A RAZÓN DE UNA POR AÑO
+12 ¿DE DONDE PROVENÍA EL DINERO ?
+ DEL BONO CONTRIBUCIÓN QUE ABONABAN LOS PADRES.
+13 ¿QUIÉN FUE EL PRESIDENTE DE LA COOPERADORA EN ESOS AÑOS?
+ INICIALMENTE EL SR.GATICA, LUEGO EL SR. CONSTANTE BOGADO POR MUCHOS AÑOS.
+14¿QUIÉN ES LA PRESIDENTA DE LA COOPERADORA ACTUALMENTE?
+ DANIELA MASCHIO
+15¿CÓMO SE LOGRÓ LA NACIONALIZACIÓN? 
+ MEDIANTE LA GESTIÓN DEL DIPUTADO DE V.C.PAZ ANSELMO PELAEZ EN LA GESTIÓN DE 
+ LEOPOLDO BRAVO EN LA PRESIDENCIA DE R.ALFONSÍN.
+
+ 
