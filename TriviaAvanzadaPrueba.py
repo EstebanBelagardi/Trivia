@@ -30,19 +30,20 @@ def cargar_preguntas():
 def cargar_usuario():
     tree.delete(*tree.get_children())
     cursor = conexion.cursor()
-    cursor.execute("SELECT * FROM Usuarios")
-    for row in cursor.fetchall():
-        tree.insert("", "end", values=row) 
+    cursor.execute("INSERT INTO Jugadores (Nombre, Instagram) VALUES (%s, %s)", (nombre, instagram))
+    conexion.commit()
 
 def mostrar_alerta(mensaje):
     messagebox.showwarning("Alerta", mensaje)
 
 def dejar_jugar():
-    global indice_pregunta_actual, respuestas_correctas
+    global nombre, instagram, tiempo_actual, puntaje_actual
     if usuario_entry.get() and instagram_entry.get():
+        nombre = usuario_entry.get().upper()
+        instagram = instagram_entry.get()
         cargar_preguntas()
-        indice_pregunta_actual = 0  # Inicializar la variable
-        respuestas_correctas = 0  # Reiniciar el contador de respuestas correctas
+        indice_pregunta_actual = 0
+        respuestas_correctas = 0
         abrir_ventana_secundaria()
         mostrar_siguiente_pregunta()
         iniciar_reloj()
@@ -99,8 +100,19 @@ def verificar_respuesta():
     mostrar_siguiente_pregunta()
 
 def finalizar_juego():
+        
+    nombre = usuario_entry.get()
+    instagram = instagram_entry.get()
+    puntaje_actual = respuestas_correctas
+    tiempo_actual = tiempo_segundos
+    
+    cursor = conexion.cursor()
+    cursor.execute("INSERT INTO resultados (Nombre, Instagram, Puntaje, Tiempo) VALUES (%s, %s, %s, %s)",(nombre, instagram, puntaje_actual, tiempo_actual))
+    conexion.commit()
+    
     ventana_secundaria.withdraw()
-    mostrar_alerta(f"Juego terminado. Respuestas correctas: {respuestas_correctas}/{len(preguntas)}")
+    mostrar_alerta(f"Juego terminado. Respuestas correctas: {puntaje_actual}/{len(preguntas)}")
+
 
 def mostrar_siguiente_pregunta():
     global pregunta_actual, indice_pregunta_actual, respuesta_seleccionada
